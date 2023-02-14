@@ -1,7 +1,7 @@
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 
-export function Home() {
+export function HomePage() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
