@@ -25,9 +25,15 @@ export function HomePage() {
       {recipes.map((receitaAtual) => {
         return (
           <>
-            <strong key={receitaAtual.id}>
-              {receitaAtual.attributes.name}
-            </strong>
+            <Link to={`/receita/${receitaAtual.id}`}>
+              <strong key={receitaAtual.id}>
+                {receitaAtual.attributes.name}
+              </strong>
+            </Link>
+
+            <Link to="/editar">
+              <button>Editar</button>
+            </Link>
           </>
         );
       })}
