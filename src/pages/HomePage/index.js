@@ -30,10 +30,7 @@ export function HomePage() {
                 {receitaAtual.attributes.name}
               </strong>
             </Link>
-
-            <Link to="/editar">
-              <button>Editar</button>
-            </Link>
+            <span> </span>
           </>
         );
       })}

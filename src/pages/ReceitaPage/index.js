@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../utils/api";
+import { Link } from "react-router-dom";
 
 export function ReceitaPage() {
   const params = useParams();
@@ -26,6 +27,15 @@ export function ReceitaPage() {
         <>
           <p>{receita.attributes.name}</p>
           <p>{receita.attributes.description}</p>
+          <img
+            src={receita.attributes.imageURL}
+            alt={`${receita.attributes.name} imagem`}
+          />
+          <p>{receita.attributes.ingredients}</p>
+          <p>{receita.attributes.preparation}</p>
+          <Link to={`/editar/${params.receitaId}`}>
+            <button>Editar</button>
+          </Link>
         </>
       )}
     </div>
