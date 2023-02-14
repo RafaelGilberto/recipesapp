@@ -1,6 +1,6 @@
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export function HomePage() {
   const [recipes, setRecipes] = useState([]);
 
@@ -8,6 +8,7 @@ export function HomePage() {
     async function fetchRecipes() {
       try {
         const response = await api.get("/recipes");
+        setRecipes(response.data.data);
         console.log(response);
       } catch (err) {
         console.log(err);
@@ -16,5 +17,20 @@ export function HomePage() {
     fetchRecipes();
   }, []);
 
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Link to="/criar">
+        <button>Criar Receita</button>
+      </Link>
+      {recipes.map((receitaAtual) => {
+        return (
+          <>
+            <strong key={receitaAtual.id}>
+              {receitaAtual.attributes.name}
+            </strong>
+          </>
+        );
+      })}
+    </>
+  );
 }
