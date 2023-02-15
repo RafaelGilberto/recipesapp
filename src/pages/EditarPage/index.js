@@ -37,7 +37,6 @@ export function EditarPage() {
     console.log(e.target);
 
     setReceita({ ...receita, [e.target.name]: e.target.value });
-    
   }
 
   async function handleSubmit(e) {
@@ -59,41 +58,41 @@ export function EditarPage() {
       <h1>Editar o prato</h1>
 
       <form onSubmit={handleSubmit}>
-         <label htmlFor="input-nome-receita">Nome: </label>
-         <input
-           id="input-nome-receita"
-           name="name"
-           value={receita.name}
-           onChange={handleChange}
-         />
-       <label htmlFor="input-receita-descricao">Descrição: </label>
-         <input
-           id="input-receita-descricao"
+        <label htmlFor="input-nome-receita">Nome: </label>
+        <input
+          id="input-nome-receita"
+          name="name"
+          value={receita.name}
+          onChange={handleChange}
+        />
+        <label htmlFor="input-receita-descricao">Descrição: </label>
+        <input
+          id="input-receita-descricao"
           name="description"
           value={receita.description}
-           onChange={handleChange}
-         />
-         <label htmlFor="input-imagem-receita">URL da imagem: </label>
-         <input
-           id="input-imagem-receita"
-           name="imageURL"
-           value={receita.imageURL}
-           onChange={handleChange}
-         />
-         <label htmlFor="input-receita-ingredientes">Ingredientes: </label>
-         <input
-           htmlFor="input-receita-ingredientes"
-           name="ingredients"
-           value={receita.ingredients}
-           onChange={handleChange}
-         />
-         <label htmlFor="input-receita-preparo">Modo de preparo: </label>
-         <input
-           htmlFor="input-receita-preparo"
-           name="preparation"
-           value={receita.preparation}
-           onChange={handleChange}
-         />
+          onChange={handleChange}
+        />
+        <label htmlFor="input-imagem-receita">URL da imagem: </label>
+        <input
+          id="input-imagem-receita"
+          name="imageURL"
+          value={receita.imageURL}
+          onChange={handleChange}
+        />
+        <label htmlFor="input-receita-ingredientes">Ingredientes: </label>
+        <input
+          htmlFor="input-receita-ingredientes"
+          name="ingredients"
+          value={receita.ingredients}
+          onChange={handleChange}
+        />
+        <label htmlFor="input-receita-preparo">Modo de preparo: </label>
+        <input
+          htmlFor="input-receita-preparo"
+          name="preparation"
+          value={receita.preparation}
+          onChange={handleChange}
+        />
 
         <button>Editar</button>
       </form>

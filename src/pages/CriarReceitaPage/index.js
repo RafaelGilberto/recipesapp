@@ -9,7 +9,7 @@ export function CriarReceita() {
     imageURL: "",
     preparation: "",
     ingredients: "",
-    status: "",
+    status: "not done",
     rating: "☆☆☆☆☆",
     calories: 0,
     price: 0,
