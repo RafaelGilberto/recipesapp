@@ -6,9 +6,12 @@ import { CriarReceita } from "./pages/CriarReceitaPage";
 import { ReceitaPage } from "./pages/ReceitaPage";
 import { EditarPage } from "./pages/EditarPage";
 
+import { NavbarRecipes } from "./Components/Navbar/index";
+
 function App() {
   return (
     <>
+      <NavbarRecipes />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/criar" element={<CriarReceita />} />
