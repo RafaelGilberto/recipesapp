@@ -50,12 +50,12 @@ export function ReceitaPage() {
             <Card style={{ width: "38em" }}>
               <Card.Body>
                 <Row>
-                  <Col>
-                    <p>
+                  <Col sm={7}>
+                    <h1>
                       <strong>{receita.attributes.name}</strong>
-                    </p>
+                    </h1>
                   </Col>
-                  <Col>
+                  <Col sm={2}>
                     <Link to={`/editar/${params.receitaId}`}>
                       <Button>Editar</Button>
                     </Link>
@@ -64,25 +64,26 @@ export function ReceitaPage() {
                     <Button onClick={handleDelete}>Deletar</Button>
                   </Col>
                 </Row>
-                <strong>Descrição</strong>
-                <p>{receita.attributes.description}</p>
+
                 <Card.Img
                   src={receita.attributes.imageURL}
                   alt={`${receita.attributes.name} imagem`}
                 />
+                <strong>Descrição</strong>
+                <p>{receita.attributes.description}</p>
                 <strong>Ingredientes</strong>
                 <p>{receita.attributes.ingredients}</p>
                 <strong>Modo de preparo</strong>
                 <p>{receita.attributes.preparation}</p>
 
                 <Row>
-                  <Col>
+                  <Col sm={3}>
                     <Button onClick={statusDoing}>Fazendo</Button>
                   </Col>
-                  <Col>
+                  <Col sm={3}>
                     <Button onClick={statusDone}>Feito</Button>
                   </Col>
-                  <Col>
+                  <Col sm={3}>
                     <Button onClick={statusNotDone}>Não Feito</Button>
                   </Col>
                 </Row>
