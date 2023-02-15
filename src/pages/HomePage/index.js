@@ -2,9 +2,6 @@ import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
-import { DoneBar } from "../../Components/DoneBar";
-import { DoBar } from "../../Components/DoBar";
-import { DoingBar } from "../../Components/DoingBar";
 
 export function HomePage() {
   const [recipes, setRecipes] = useState([]);
@@ -32,38 +29,32 @@ export function HomePage() {
           </Link>
         </Col>
       </Row>
-      <DoBar />
-
-      <Container>
-        <Row>
-          {recipes
-            .filter(
-              (receitaAtual) => receitaAtual.attributes.status === "not done"
-            )
-            .map((receitaAtual) => {
-              return (
-                <Col key={receitaAtual.id}>
-                  <div>
-                    <Card style={{ width: "18rem" }}>
-                      <Card.Img src={receitaAtual.attributes.imageURL} />
-                      <Card.Body>
-                        <Card.Title>
-                          <Link to={`/receita/${receitaAtual.id}`}>
-                            <strong>{receitaAtual.attributes.name}</strong>
-                          </Link>
-                        </Card.Title>
-                        <Card.Text>
-                          {receitaAtual.attributes.description}
-                        </Card.Text>
-                        <Button>Ler</Button>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-              );
-            })}
-        </Row>
-      </Container>
+      <Row>
+        <Col>
+          <Card style={{ width: "38em" }}>
+            <Card.Body>IMAGEM</Card.Body>
+          </Card>
+          <Link to={`/afazer`}>
+            <Button>Nao Feito</Button>
+          </Link>
+        </Col>
+        <Col>
+          <Card style={{ width: "38em" }}>
+            <Card.Body>IMAGEM</Card.Body>
+          </Card>
+          <Link to={`/feito`}>
+            <Button>Feito</Button>
+          </Link>
+        </Col>
+        <Col>
+          <Card style={{ width: "38em" }}>
+            <Card.Body>IMAGEM</Card.Body>
+          </Card>
+          <Link to={`/fazendo`}>
+            <Button>Fazendo</Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }
