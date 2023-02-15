@@ -24,14 +24,12 @@ export function HomePage() {
       </Link>
       {recipes.map((receitaAtual) => {
         return (
-          <>
+          <div key={receitaAtual.id}>
             <Link to={`/receita/${receitaAtual.id}`}>
-              <strong key={receitaAtual.id}>
-                {receitaAtual.attributes.name}
-              </strong>
+              <strong>{receitaAtual.attributes.name}</strong>
             </Link>
             <span> </span>
-          </>
+          </div>
         );
       })}
     </>
