@@ -33,14 +33,32 @@ export function ReceitaPage() {
     }
   }
 
-  function statusDone() {
-    receita.attributes.status = "done";
+  async function statusDone() {
+    try {
+      await api.put(`/recipes/${params.receitaId}`, {
+        data: { status: "done" },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
-  function statusNotDone() {
-    receita.attributes.status = "not done";
+  async function statusNotDone() {
+    try {
+      await api.put(`/recipes/${params.receitaId}`, {
+        data: { status: "not done" },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
-  function statusDoing() {
-    receita.attributes.status = "doing";
+  async function statusDoing() {
+    try {
+      await api.put(`/recipes/${params.receitaId}`, {
+        data: { status: "doing" },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
   return (
     <div>
