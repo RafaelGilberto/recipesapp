@@ -64,7 +64,7 @@ export function ReceitaPage() {
     <div>
       {!isLoading && (
         <>
-          <Container>
+          <Container className="my-4 d-flex justify-content-center">
             <Card style={{ width: "38em" }}>
               <Card.Body>
                 <Row>
