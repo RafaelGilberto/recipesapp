@@ -42,7 +42,14 @@ export function NaoFeito() {
                         {receitaAtual.attributes.description}
                       </Card.Text>
                       <Link to={`/receita/${receitaAtual.id}`}>
-                        <Button>Ler</Button>
+                        <Button
+                          style={{
+                            backgroundColor: "darkslateblue",
+                            border: "1px solid black",
+                          }}
+                        >
+                          Ler
+                        </Button>
                       </Link>
                     </Card.Body>
                   </Card>
