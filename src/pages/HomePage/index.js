@@ -53,7 +53,7 @@ export function HomePage() {
             }}
           >
             <Link to="/criar">
-              <button type="button" class="btn btn-primary btn-lg">
+              <button type="button" className="btn btn-primary btn-lg">
                 Criar Receita
               </button>
             </Link>
