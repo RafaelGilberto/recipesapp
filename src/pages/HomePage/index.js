@@ -2,7 +2,11 @@ import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
-import { padding } from "@mui/system";
+import fotoHomePage from "../../Components/Images/fotoHomePage.png";
+import fotoCriarReceita from "../../Components/Images/cardCriarReceita.png";
+import fotoFazendo from "../../Components/Images/cardFazendo.png";
+import fotoFeito from "../../Components/Images/cardFeito.png";
+import fotoNaoFeito from "../../Components/Images/cardNaoFeito.png";
 
 export function HomePage() {
   const [recipes, setRecipes] = useState([]);
@@ -22,68 +26,77 @@ export function HomePage() {
 
   return (
     <>
-      <Container>
-        <Row style={{ width: "100vw", height: "75vh", marginBottom: "80px" }}>
-          <Col sm={12}></Col>
-        </Row>
+      <Card.Img
+        src={fotoHomePage}
+        style={{ width: "100vw", height: "100vh", marginBottom: "80px" }}
+      />
+      <Container style={{}}>
         <Row style={{ margin: "20px" }}>
           <Col sm={3} style={{ padding: "0px" }}></Col>
-          <Col sm={6} style={{ padding: "0px" }}>
+          <Col
+            sm={6}
+            style={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Card
+              sm={6}
               style={{
                 padding: "0px",
-                width: "492px",
-                height: "352px",
               }}
             >
-              <Card.Body style={{ padding: "30px" }}>IMAGEM</Card.Body>
+              <Card.Img src={fotoCriarReceita} />
+              {/* <Card.Body style={{ padding: "30px" }}> </Card.Body> */}
             </Card>
           </Col>
           <Col sm={3} style={{ padding: "0px" }}></Col>
         </Row>
         <Row style={{ margin: "20px" }}>
           <Col sm={3}></Col>
-          <Col
-            sm={6}
-            style={{
-              margin: "0px",
-              padding: "0px",
-              display: "grid",
-              justifyContent: "space-around",
-            }}
-          >
+          <Col sm={6} className="cardCenter">
             <Link to="/criar">
               <button type="button" class="btn btn-primary btn-lg">
                 Criar Receita
               </button>
             </Link>
           </Col>
-          <Col sm={3} style={{ padding: "0px" }}></Col>
+          <Col sm={3} style={{ padding: "0px" }} className="cardCenter"></Col>
         </Row>
       </Container>
-      <Container>
+      <Container
+        style={{
+          alignItems: "center",
+          display: "grid",
+          justifyContent: "space-between",
+          justifItems: "center",
+          margin: "0px",
+          padding: "0px",
+        }}
+      >
         <Row style={{ marginTop: "100px", width: "100vw" }}>
-          <Col>
+          <Col className="cardCenter">
             <Card style={{ width: "200px", height: "300px" }}>
-              <Card.Body>IMAGEM</Card.Body>
+              <Card.Img src={fotoNaoFeito} />
             </Card>
-            <Link to={`/afazer`}>
+            <Link to={`/afazer`} style={{ margin: "50px" }}>
               <Button style={{ margin: "20px" }}>Nao Feito</Button>
             </Link>
           </Col>
-          <Col>
+          <Col className="cardCenter">
             <Card style={{ width: "200px", height: "300px" }}>
-              <Card.Body>IMAGEM</Card.Body>
+              <Card.Img src={fotoFeito} />
             </Card>
-            <Link to={`/feito`}>
+            <Link to={`/feito`} style={{ margin: "50px" }}>
               <Button style={{ margin: "20px" }}>Feito</Button>
             </Link>
           </Col>
-          <Col>
+          <Col className="cardCenter">
             <Card style={{ width: "200px", height: "300px" }}>
-              <Card.Body>IMAGEM</Card.Body>
+              <Card.Img src={fotoFazendo} />
             </Card>
-            <Link to={`/fazendo`}>
+            <Link to={`/fazendo`} style={{ margin: "50px" }}>
               <Button style={{ margin: "20px" }}>Fazendo</Button>
             </Link>
           </Col>
