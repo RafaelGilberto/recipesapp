@@ -6,13 +6,15 @@ import App from "./../../App";
 export function NavbarRecipes() {
   return (
     <>
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <Navbar.Brand href="/">Recipes App</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-          </Nav>
-        </Container>
+      <Navbar style={{ backgroundColor: "darkslateblue", width: "100vw" }}>
+        <Navbar.Brand href="/" style={{ color: "white", paddingLeft: "20px" }}>
+          Recipes App
+        </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="/" style={{ color: "white" }}>
+            Home
+          </Nav.Link>
+        </Nav>
       </Navbar>
     </>
   );
