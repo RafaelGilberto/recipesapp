@@ -38,6 +38,7 @@ export function ReceitaPage() {
       await api.put(`/recipes/${params.receitaId}`, {
         data: { status: "done" },
       });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -47,6 +48,7 @@ export function ReceitaPage() {
       await api.put(`/recipes/${params.receitaId}`, {
         data: { status: "not done" },
       });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -56,6 +58,7 @@ export function ReceitaPage() {
       await api.put(`/recipes/${params.receitaId}`, {
         data: { status: "doing" },
       });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
