@@ -27,20 +27,23 @@ export function NaoFeito() {
           )
           .map((receitaAtual) => {
             return (
-              <Col key={receitaAtual.id}>
+              <Col
+                key={receitaAtual.id}
+                className="d-flex justify-content-center"
+              >
                 <div>
-                  <Card style={{ width: "18rem" }}>
+                  <Card style={{ width: "18rem", margin: "1rem" }}>
                     <Card.Img src={receitaAtual.attributes.imageURL} />
                     <Card.Body>
                       <Card.Title>
-                        <Link to={`/receita/${receitaAtual.id}`}>
-                          <strong>{receitaAtual.attributes.name}</strong>
-                        </Link>
+                        <strong>{receitaAtual.attributes.name}</strong>
                       </Card.Title>
                       <Card.Text>
                         {receitaAtual.attributes.description}
                       </Card.Text>
-                      <Button>Ler</Button>
+                      <Link to={`/receita/${receitaAtual.id}`}>
+                        <Button>Ler</Button>
+                      </Link>
                     </Card.Body>
                   </Card>
                 </div>
