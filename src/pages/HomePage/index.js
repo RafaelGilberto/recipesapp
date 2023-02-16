@@ -57,7 +57,14 @@ export function HomePage() {
           <Col sm={3}></Col>
           <Col sm={6} className="cardCenter">
             <Link to="/criar">
-              <button type="button" className="btn btn-primary btn-lg">
+              <button
+                type="button"
+                className="btn btn-primary btn-lg"
+                style={{
+                  backgroundColor: "darkslateblue",
+                  border: "1px solid black",
+                }}
+              >
                 Criar Receita
               </button>
             </Link>
@@ -81,7 +88,15 @@ export function HomePage() {
               <Card.Img src={fotoNaoFeito} />
             </Card>
             <Link to={`/afazer`} style={{ margin: "50px" }}>
-              <Button style={{ margin: "20px" }}>Nao Feito</Button>
+              <Button
+                style={{
+                  margin: "20px",
+                  backgroundColor: "darkslateblue",
+                  border: "1px solid black",
+                }}
+              >
+                Nao Feito
+              </Button>
             </Link>
           </Col>
           <Col className="cardCenter">
@@ -89,7 +104,15 @@ export function HomePage() {
               <Card.Img src={fotoFeito} />
             </Card>
             <Link to={`/feito`} style={{ margin: "50px" }}>
-              <Button style={{ margin: "20px" }}>Feito</Button>
+              <Button
+                style={{
+                  margin: "20px",
+                  backgroundColor: "darkslateblue",
+                  border: "1px solid black",
+                }}
+              >
+                Feito
+              </Button>
             </Link>
           </Col>
           <Col className="cardCenter">
@@ -97,7 +120,15 @@ export function HomePage() {
               <Card.Img src={fotoFazendo} />
             </Card>
             <Link to={`/fazendo`} style={{ margin: "50px" }}>
-              <Button style={{ margin: "20px" }}>Fazendo</Button>
+              <Button
+                style={{
+                  margin: "20px",
+                  backgroundColor: "darkslateblue",
+                  border: "1px solid black",
+                }}
+              >
+                Fazendo
+              </Button>
             </Link>
           </Col>
         </Row>

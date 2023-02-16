@@ -75,11 +75,26 @@ export function ReceitaPage() {
                   </Col>
                   <Col sm={2}>
                     <Link to={`/editar/${params.receitaId}`}>
-                      <Button>Editar</Button>
+                      <Button
+                        style={{
+                          backgroundColor: "blue",
+                          border: "1px solid black",
+                        }}
+                      >
+                        Editar
+                      </Button>
                     </Link>
                   </Col>
                   <Col>
-                    <Button onClick={handleDelete}>Deletar</Button>
+                    <Button
+                      onClick={handleDelete}
+                      style={{
+                        backgroundColor: "red",
+                        border: "1px solid black",
+                      }}
+                    >
+                      Deletar
+                    </Button>
                   </Col>
                 </Row>
 
@@ -96,13 +111,37 @@ export function ReceitaPage() {
 
                 <Row>
                   <Col sm={3}>
-                    <Button onClick={statusDoing}>Fazendo</Button>
+                    <Button
+                      onClick={statusDoing}
+                      style={{
+                        backgroundColor: "darkslateblue",
+                        border: "1px solid black",
+                      }}
+                    >
+                      Fazendo
+                    </Button>
                   </Col>
                   <Col sm={3}>
-                    <Button onClick={statusDone}>Feito</Button>
+                    <Button
+                      onClick={statusDone}
+                      style={{
+                        backgroundColor: "darkslateblue",
+                        border: "1px solid black",
+                      }}
+                    >
+                      Feito
+                    </Button>
                   </Col>
                   <Col sm={3}>
-                    <Button onClick={statusNotDone}>Não Feito</Button>
+                    <Button
+                      onClick={statusNotDone}
+                      style={{
+                        backgroundColor: "darkslateblue",
+                        border: "1px solid black",
+                      }}
+                    >
+                      Não Feito
+                    </Button>
                   </Col>
                 </Row>
               </Card.Body>
