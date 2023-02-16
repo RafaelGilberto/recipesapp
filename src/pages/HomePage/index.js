@@ -88,6 +88,7 @@ export function HomePage() {
               <Card.Img src={fotoNaoFeito} />
             </Card>
             <Link to={`/afazer`} style={{ margin: "50px" }}>
+
               <Button
                 style={{
                   margin: "20px",
@@ -104,6 +105,7 @@ export function HomePage() {
               <Card.Img src={fotoFeito} />
             </Card>
             <Link to={`/feito`} style={{ margin: "50px" }}>
+
               <Button
                 style={{
                   margin: "20px",
@@ -113,6 +115,7 @@ export function HomePage() {
               >
                 Feito
               </Button>
+
             </Link>
           </Col>
           <Col className="cardCenter">
@@ -120,6 +123,7 @@ export function HomePage() {
               <Card.Img src={fotoFazendo} />
             </Card>
             <Link to={`/fazendo`} style={{ margin: "50px" }}>
+
               <Button
                 style={{
                   margin: "20px",
@@ -129,6 +133,7 @@ export function HomePage() {
               >
                 Fazendo
               </Button>
+
             </Link>
           </Col>
         </Row>
